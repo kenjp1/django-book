@@ -143,7 +143,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # フォーム処理を実行可能なドメイン設定
-CSRF_TRUSTED_ORIGINS = ['https://*.amazonaws.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.app.github.dev', 
+    'https://localhost:8080',
+]
 
 # フラッシュメッセージ設定
 from django.contrib.messages import constants as messages
@@ -155,4 +158,3 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert alert-danger',
 }
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
-
